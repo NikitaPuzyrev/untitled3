@@ -1,111 +1,14 @@
+import java.io.IOException;
 import java.util.Scanner;
 
 import java.util.HashMap;
 public class test_2 {
-    public static void main(String[] args) {
-        HashMap<String, String> map = new HashMap<>();
-        map.put("I", "1");
-        map.put("II", "2");
-        map.put("III", "3");
-        map.put("VII", "7");
-        map.put("VI", "6");
-        map.put("IV", "4");
-        map.put("V", "5");
-        map.put("VIII", "8");
-        map.put("IX", "9");
-        map.put("X", "10");
+    public static void main(String[] args) throws IOException {
 
-        HashMap<String, String> map1 = new HashMap<>();
-        map1.put("1", "I");
-        map1.put("2", "II");
-        map1.put("3", "III");
-        map1.put("4", "IV");
-        map1.put("5", "V");
-        map1.put("6", "VI");
-        map1.put("7", "VII");
-        map1.put("8", "VIII");
-        map1.put("9", "IX");
-        map1.put("10", "X");
-        for (int i = 1; i < 11; i++) {
-            String ii = Integer.toString(i);
-            String v = map1.get(ii);
-            int k1 = i + 10;
-            String k = Integer.toString(k1);
-            String vn = "X" + v;
-            map1.put(k, vn);
 
-        }
-        for (int i = 1; i < 11; i++) {
-            String ii = Integer.toString(i);
-            String v = map1.get(ii);
-            int k1 = i + 20;
-            String k = Integer.toString(k1);
-            String vn = "XX" + v;
-            map1.put(k, vn);
+        String ara = "1, 2, 3, 4, 5, 6, 7, 8, 9, 10";
+        String rom = "I, II, III, IV, v, VI, VII, VIII, iX, X";
 
-        }
-        for (int i = 1; i < 11; i++) {
-            String ii = Integer.toString(i);
-            String v = map1.get(ii);
-            int k1 = i + 30;
-            String k = Integer.toString(k1);
-            String vn = "XXX" + v;
-            map1.put(k, vn);
-
-        }
-        for (int i = 1; i < 11; i++) {
-            String ii = Integer.toString(i);
-            String v = map1.get(ii);
-            int k1 = i + 40;
-            String k = Integer.toString(k1);
-            String vn = "XL" + v;
-            map1.put(k, vn);
-
-        }
-        for (int i = 1; i < 11; i++) {
-            String ii = Integer.toString(i);
-            String v = map1.get(ii);
-            int k1 = i + 50;
-            String k = Integer.toString(k1);
-            String vn = "L" + v;
-            map1.put(k, vn);
-
-        }
-        for (int i = 1; i < 11; i++) {
-            String ii = Integer.toString(i);
-            String v = map1.get(ii);
-            int k1 = i + 60;
-            String k = Integer.toString(k1);
-            String vn = "LX" + v;
-            map1.put(k, vn);
-
-        }
-        for (int i = 1; i < 11; i++) {
-            String ii = Integer.toString(i);
-            String v = map1.get(ii);
-            int k1 = i + 70;
-            String k = Integer.toString(k1);
-            String vn = "LXX" + v;
-            map1.put(k, vn);
-
-        }
-        for (int i = 1; i < 11; i++) {
-            String ii = Integer.toString(i);
-            String v = map1.get(ii);
-            int k1 = i + 80;
-            String k = Integer.toString(k1);
-            String vn = "LXXX" + v;
-            map1.put(k, vn);
-
-        }
-        for (int i = 1; i < 11; i++) {
-            String ii = Integer.toString(i);
-            String v = map1.get(ii);
-            int k1 = i + 90;
-            String k = Integer.toString(k1);
-            String vn = "XC" + v;
-            map1.put(k, vn);   //словарь
-        }
         Scanner in = new Scanner(System.in);
         System.out.print("enter a task: ");
         String num = in.nextLine();
@@ -116,14 +19,14 @@ public class test_2 {
             int sr = strings.length;
 
             if (sr != 3) {
-                System.out.println("Input Error");
-                System.exit(0);
+                throw new IOException("wrong format input");
+
             }
         }
             String sa = strings[0];
             String ms = strings[1];
             String sb = strings[2];
-            if (map1.containsKey(sa) & map1.containsKey(sb)) {
+            if (ara.contains(sa) && ara.contains(sb)) {
                 int k2 = Integer.valueOf(strings[0]);
                 int a2 = Integer.valueOf(strings[2]);
 
@@ -144,15 +47,17 @@ public class test_2 {
                     } else if (m.equals("/")) {
                         int r = k2 / a2;
                         System.out.println(r);
+                    } else {
+                        System.out.println("Input Error");
                     }
+
                 }
                 else {
-                    System.out.println("Input Error element is  big ");
-                    System.exit(0);
+                    throw new IOException("wrong format input");
                 }
-            } else if (map.containsKey(sa) & map.containsKey(sb)) {
-                String ars = map.get(sa);
-                String brs = map.get(sb);
+            } else if (rom.contains(sa)  && rom.contains(sb)) {
+                String ars = A_ROM_Map.map.(sa);
+                String brs = A_ROM_Map.map.(sb);
                 int ar = Integer.valueOf(ars);
                 int br = Integer.valueOf(brs);
 
@@ -160,34 +65,34 @@ public class test_2 {
                     case "+":
                         int r = br + ar;
                         String rr = Integer.toString(r);
-                        System.out.println(map1.get(rr));
+                        System.out.println(A_ROM_Map.map1(rr));
                         break;
                     case "-":
                         if (ar <= br) {
-                            System.out.println("Input Error Roman numerals are only positive");
-                            break;
+                            throw new IOException("Input Error Roman numerals are only positive");
+
                         } else {
                             int r3 = ar - br;
                             String r3r = Integer.toString(r3);
-                            System.out.println(map1.get(r3r));
+                            System.out.println(A_ROM_Map.map1(r3r));
                             break;
                         }
                     case "*":
                         int r4 = ar * br;
                         String r4r = Integer.toString(r4);
-                        System.out.println(map1.get(r4r));
+                        System.out.println((A_ROM_Map.map1(r4r)));
                         break;
                     case  "/":
                         int r5 = ar / br;
                         String r5r = Integer.toString(r5);
-                        System.out.println(map1.get(r5r));
+                        System.out.println((A_ROM_Map.map1(r5r)));
                         break;
                     default:
-                        System.out.println("Input Error");
+                        throw new IOException("wrong format input");
                 }
 
             } else{
-            System.out.println("Input Error");
+                throw new IOException("wrong format input");
         }
     }}
 

@@ -122,14 +122,14 @@ public class test_3 {
                     throw  new IOException();
             }catch (IOException e) {
                 System.out.println("wrong format input");
-                System.exit(0);
+
                 }
             }
         }
         String sa = strings[0];
         String ms = strings[1];
         String sb = strings[2];
-        if (map1.containsKey(sa) & map1.containsKey(sb)) {
+        if (map1.containsKey(sa) && map1.containsKey(sb)) {
             int k2 = Integer.valueOf(strings[0]);
             int a2 = Integer.valueOf(strings[2]);
 
@@ -150,13 +150,15 @@ public class test_3 {
                 } else if (m.equals("/")) {
                     int r = k2 / a2;
                     System.out.println(r);
+                }else {
+                    System.out.println("Input Error");
                 }
             }
             else {
                 System.out.println("Input Error element is  big ");
                 System.exit(0);
             }
-        } else if (map.containsKey(sa) & map.containsKey(sb)) {
+        } else if (map.containsKey(sa) && map.containsKey(sb)) {
             String ars = map.get(sa);
             String brs = map.get(sb);
             int ar = Integer.valueOf(ars);
