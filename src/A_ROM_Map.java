@@ -3,7 +3,7 @@ import java.util.Map;
 
 public class A_ROM_Map {
 
-    public static Map<String,String> createRomanToArabicMap() {
+    public static Map<String,String> createArabictoRomanMap() {
 
         HashMap<String, String> map1 = new HashMap<>();
 
