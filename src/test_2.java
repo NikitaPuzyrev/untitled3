@@ -1,20 +1,19 @@
 import java.io.IOException;
 import java.util.Scanner;
 
-import java.util.HashMap;
 public class test_2 {
     public static void main(String[] args) throws IOException {
 
 
         String ara = "1, 2, 3, 4, 5, 6, 7, 8, 9, 10";
-        String rom = "I, II, III, IV, v, VI, VII, VIII, iX, X";
+        String rom = "I, II, III, IV, v, VI, VII, VIII, IX, X";
 
         Scanner in = new Scanner(System.in);
         System.out.print("enter a task: ");
         String num = in.nextLine();
 
         String[] strings = num.split(" ");
-        for (String element : strings) {
+        for (String ignored : strings) {
             // System.out.println(element);
             int sr = strings.length;
 
@@ -50,14 +49,13 @@ public class test_2 {
                     } else {
                         System.out.println("Input Error");
                     }
-
                 }
                 else {
                     throw new IOException("wrong format input");
                 }
             } else if (rom.contains(sa)  && rom.contains(sb)) {
-                String ars = A_ROM_Map.map.(sa);
-                String brs = A_ROM_Map.map.(sb);
+                String ars = A_ROM_Map.map(sa);
+                String brs = A_ROM_Map.map(sb);
                 int ar = Integer.valueOf(ars);
                 int br = Integer.valueOf(brs);
 

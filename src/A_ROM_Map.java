@@ -1,13 +1,11 @@
 import java.util.HashMap;
 
 public class A_ROM_Map {
-    public static void main(String[] args) {
-
-    }
 
     public static String map1(String a) {
 
         HashMap<String, String> map1 = new HashMap<>();
+
         map1.put("1", "I");
         map1.put("2", "II");
         map1.put("3", "III");
@@ -18,7 +16,8 @@ public class A_ROM_Map {
         map1.put("8", "VIII");
         map1.put("9", "IX");
         map1.put("10", "X");
-        for (int i = 1; i < 11; i++) {
+
+            for (int i = 1; i < 101; i++) {
             String ii = Integer.toString(i);
             String v = map1.get(ii);
             int k1 = i + 10;
@@ -98,8 +97,8 @@ public class A_ROM_Map {
             String vn = "XC" + v;
             map1.put(k, vn);
                     }
-        String ars = map1.get(a);
-        return ars;
+        String rom = map1.get(a);
+        return rom;
     }
     public static String map(String a) {
         HashMap<String, String> map = new HashMap<>();
