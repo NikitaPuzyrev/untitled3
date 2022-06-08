@@ -71,7 +71,7 @@ public class Main {
                     break;
                 case "-":
                     if (ar <= br) {
-                        throw new IOException("Input Error Roman numerals are only positive");
+                        throw new IOException("Result error Roman numerals are only positive");
 
                     } else {
                         int r3 = ar - br;
