@@ -1,8 +1,9 @@
 import java.util.HashMap;
+import java.util.Map;
 
 public class A_ROM_Map {
 
-    public static String map1(String a) {
+    public static Map<String,String> createRomanToArabicMap() {
 
         HashMap<String, String> map1 = new HashMap<>();
 
@@ -17,7 +18,7 @@ public class A_ROM_Map {
         map1.put("9", "IX");
         map1.put("10", "X");
 
-            for (int i = 1; i < 101; i++) {
+        for (int i = 1; i < 101; i++) {
             String ii = Integer.toString(i);
             String v = map1.get(ii);
             int k1 = i + 10;
@@ -96,10 +97,11 @@ public class A_ROM_Map {
             String k = Integer.toString(k1);
             String vn = "XC" + v;
             map1.put(k, vn);
-                    }
-        String rom = map1.get(a);
-        return rom;
+            return map1;
+        }
+        return map1;
     }
+
     public static String map(String a) {
         HashMap<String, String> map = new HashMap<>();
         map.put("I", "1");
@@ -115,6 +117,7 @@ public class A_ROM_Map {
         String ars = map.get(a);
         return ars;
     }
-}
 
+
+    }
 
