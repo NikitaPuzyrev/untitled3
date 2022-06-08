@@ -9,6 +9,7 @@ public class Main {
     public static void main(String[] args) throws IOException {
 
         Map<String, String> map = A_ROM_Map.createArabictoRomanMap();
+        Map<String, Integer> romto_a = A_ROM_Map.createRomanArabicMap();
         List<String> numbers = Arrays.asList("1", "2", "3", "4", "5", "6", "7", "8", "9", "10");
 
         List<String> roman = Arrays.asList("I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X");
@@ -58,10 +59,9 @@ public class Main {
                 throw new IOException("wrong format input");
             }
         } else if (roman.contains(sa) && roman.contains(sb)) {
-            String ars = A_ROM_Map.map(sa);
-            String brs = A_ROM_Map.map(sb);
-            int ar = Integer.valueOf(ars);
-            int br = Integer.valueOf(brs);
+
+            int ar = romto_a.get(sa);
+            int br = romto_a.get(sb);
 
             switch (ms) {
                 case "+":

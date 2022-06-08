@@ -102,20 +102,20 @@ public class A_ROM_Map {
         return map1;
     }
 
-    public static String map(String a) {
-        HashMap<String, String> map = new HashMap<>();
-        map.put("I", "1");
-        map.put("II", "2");
-        map.put("III", "3");
-        map.put("VII", "7");
-        map.put("VI", "6");
-        map.put("IV", "4");
-        map.put("V", "5");
-        map.put("VIII", "8");
-        map.put("IX", "9");
-        map.put("X", "10");
-        String ars = map.get(a);
-        return ars;
+    public static HashMap<String, Integer> createRomanArabicMap() {
+        HashMap<String, Integer> map = new HashMap<>();
+        map.put("I", 1);
+        map.put("II", 2);
+        map.put("III", 3);
+        map.put("VII", 7);
+        map.put("VI", 6);
+        map.put("IV", 4);
+        map.put("V", 5);
+        map.put("VIII", 8);
+        map.put("IX", 9);
+        map.put("X", 10);
+
+        return map;
     }
 
 
