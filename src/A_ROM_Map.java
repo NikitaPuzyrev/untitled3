@@ -6,7 +6,7 @@ public class A_ROM_Map {
     public static Map<String,String> createArabictoRomanMap() {
 
         HashMap<String, String> map1 = new HashMap<>();
-
+        map1.put("0", " ");
         map1.put("1", "I");
         map1.put("2", "II");
         map1.put("3", "III");
@@ -18,7 +18,7 @@ public class A_ROM_Map {
         map1.put("9", "IX");
         map1.put("10", "X");
 
-        for (int i = 1; i < 101; i++) {
+        for (int i = 0; i < 10; i++) {
             String ii = Integer.toString(i);
             String v = map1.get(ii);
             int k1 = i + 10;
@@ -27,7 +27,7 @@ public class A_ROM_Map {
             map1.put(k, vn);
 
         }
-        for (int i = 1; i < 11; i++) {
+        for (int i = 0; i < 10; i++) {
             String ii = Integer.toString(i);
             String v = map1.get(ii);
             int k1 = i + 20;
@@ -36,16 +36,8 @@ public class A_ROM_Map {
             map1.put(k, vn);
 
         }
-        for (int i = 1; i < 11; i++) {
-            String ii = Integer.toString(i);
-            String v = map1.get(ii);
-            int k1 = i + 30;
-            String k = Integer.toString(k1);
-            String vn = "XXX" + v;
-            map1.put(k, vn);
+        for (int i = 0; i < 10; i++) {
 
-        }
-        for (int i = 1; i < 11; i++) {
             String ii = Integer.toString(i);
             String v = map1.get(ii);
             int k1 = i + 40;
@@ -54,7 +46,7 @@ public class A_ROM_Map {
             map1.put(k, vn);
 
         }
-        for (int i = 1; i < 11; i++) {
+        for (int i = 0; i < 10; i++) {
             String ii = Integer.toString(i);
             String v = map1.get(ii);
             int k1 = i + 50;
@@ -63,7 +55,7 @@ public class A_ROM_Map {
             map1.put(k, vn);
 
         }
-        for (int i = 1; i < 11; i++) {
+        for (int i = 0; i < 10; i++) {
             String ii = Integer.toString(i);
             String v = map1.get(ii);
             int k1 = i + 60;
@@ -72,7 +64,7 @@ public class A_ROM_Map {
             map1.put(k, vn);
 
         }
-        for (int i = 1; i < 11; i++) {
+        for (int i = 0; i < 10; i++) {
             String ii = Integer.toString(i);
             String v = map1.get(ii);
             int k1 = i + 70;
@@ -81,7 +73,7 @@ public class A_ROM_Map {
             map1.put(k, vn);
 
         }
-        for (int i = 1; i < 11; i++) {
+        for (int i = 0; i < 10; i++) {
             String ii = Integer.toString(i);
             String v = map1.get(ii);
             int k1 = i + 80;
@@ -90,7 +82,7 @@ public class A_ROM_Map {
             map1.put(k, vn);
 
         }
-        for (int i = 1; i < 11; i++) {
+        for (int i = 0; i < 10; i++) {
             String ii = Integer.toString(i);
             String v = map1.get(ii);
             int k1 = i + 90;
