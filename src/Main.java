@@ -36,7 +36,7 @@ public class Main {
             if (sbr < 11 & sar < 11) {
                 System.out.println(test.mather(sar, sbr, ms));
             } else {
-                throw new IOException("wrong format input");
+                throw new IOException(" input");
             }
         } else {
             if (roman.contains(sa) && roman.contains(sb)) {
