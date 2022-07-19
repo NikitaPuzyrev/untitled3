@@ -19,82 +19,44 @@ public class Main {
         String num = in.nextLine();
 
         String[] strings = num.split(" ");
-        for (String ignored : strings) {
-
-            int sr = strings.length;
-
-            if (sr != 3) {
-                throw new IOException("wrong format input");
-
-            }
-        }
+        int sr = strings.length;
         String sa = strings[0];
         String ms = strings[1];
         String sb = strings[2];
+
+        if (sr != 3) {
+            throw new IOException("input");
+        }
+
         if (numbers.contains(sa) && numbers.contains(sb)) {
-            int k2 = Integer.valueOf(strings[0]);
-            int a2 = Integer.valueOf(strings[2]);
+            int sar = Integer.valueOf(strings[0]);
+            int sbr = Integer.valueOf(strings[2]);
 
-            if (k2 < 11 & a2 < 11) {
 
-                String m = strings[1];
-                if (m.equals("+")) {
-                    int r = a2 + k2;
-                    System.out.println(r);
-                } else if (m.equals("-")) {
-                    int r = k2 - a2;
+            if (sbr < 11 & sar < 11) {
+                System.out.println(test.mather(sar, sbr, ms));
+            } else {
+                throw new IOException("wrong format input");
+            }
+        } else {
+            if (roman.contains(sa) && roman.contains(sb)) {
 
-                    System.out.println(r);
-                } else if (m.equals("*")) {
-                    int r = k2 * a2;
-                    System.out.println(r);
+                int ar = romto_a.get(sa);
+                int br = romto_a.get(sb);
 
-                } else if (m.equals("/")) {
-                    int r = k2 / a2;
-                    System.out.println(r);
+                int r = test.mather(ar, br, ms);
+                if (r > 0) {
+                    System.out.println(map.get(Integer.toString(r)));
+
                 } else {
-                    throw new IOException("wrong format input");
+                    throw new IOException("Result error Roman numerals are only positive");
+
                 }
             } else {
                 throw new IOException("wrong format input");
             }
-        } else if (roman.contains(sa) && roman.contains(sb)) {
-
-            int ar = romto_a.get(sa);
-            int br = romto_a.get(sb);
-
-            switch (ms) {
-                case "+":
-                    int r = br + ar;
-                    String rr = Integer.toString(r);
-                    System.out.println(map.get(rr));
-                    break;
-                case "-":
-                    if (ar <= br) {
-                        throw new IOException("Result error Roman numerals are only positive");
-
-                    } else {
-                        int r3 = ar - br;
-                        String r3r = Integer.toString(r3);
-                        System.out.println(map.get(r3r));
-                        break;
-                    }
-                case "*":
-                    int r4 = ar * br;
-                    String r4r = Integer.toString(r4);
-                    System.out.println(map.get(r4r));
-                    break;
-                case "/":
-                    int r5 = ar / br;
-                    String r5r = Integer.toString(r5);
-                    System.out.println(map.get(r5r));
-                    break;
-                default:
-                    throw new IOException("wrong format input");
-            }
-
-        } else {
-            throw new IOException("wrong format input");
         }
     }
+
 }
+
