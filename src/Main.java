@@ -49,7 +49,7 @@ public class Main {
                     System.out.println(map.get(Integer.toString(r)));
 
                 } else {
-                    throw new IOException("Res er Roman numerals are only positive");
+                    throw new IOException("Result error Roman numerals are only positive");
 
                 }
             } else {
